@@ -8,14 +8,16 @@ FROM nginx:alpine
 LABEL maintainer="Your Name <you@example.com>"
 LABEL description="The Leaky Tap – Fan website for Critical Role's fictional tavern in Zadash"
 
+# Copy custom nginx config FIRST (before clearing html dir)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Remove default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy site files
-COPY . /usr/share/nginx/html/
-
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy only web assets (not Dockerfile, nginx.conf, .github, etc.)
+COPY index.html /usr/share/nginx/html/
+COPY css/       /usr/share/nginx/html/css/
+COPY js/        /usr/share/nginx/html/js/
 
 # Expose port 80
 EXPOSE 80

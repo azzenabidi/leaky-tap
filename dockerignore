@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+docker-compose.yml
+nginx.conf
+.github/
+.gitignore
+README.md
+*.md
+.DS_Store
+node_modules/
