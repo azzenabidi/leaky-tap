@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Leaky Tap — Zadash's Finest Tavern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Uncial+Antiqua&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Atmospheric overlay layers -->
+  <div class="smoke-layer"></div>
+  <div class="grain-overlay"></div>
+  <div class="vignette"></div>
+
+  <!-- Floating embers -->
+  <div class="embers" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-icon">🍺</span>
+      <span>The Leaky Tap</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">The Tap</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#staff">Staff</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#find-us">Find Us</a></li>
+    </ul>
+    <button class="nav-burger" aria-label="Open menu" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <div class="nav-mobile" id="navMobile">
+    <button class="nav-close" onclick="toggleNav()">✕</button>
+    <ul>
+      <li><a href="#about" onclick="toggleNav()">The Tap</a></li>
+      <li><a href="#menu" onclick="toggleNav()">Menu</a></li>
+      <li><a href="#rooms" onclick="toggleNav()">Rooms</a></li>
+      <li><a href="#staff" onclick="toggleNav()">Staff</a></li>
+      <li><a href="#events" onclick="toggleNav()">Events</a></li>
+      <li><a href="#find-us" onclick="toggleNav()">Find Us</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-fire"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 830 PD · Outersteads, Zadash</p>
+      <h1 class="hero-title">
+        <span class="hero-title-the">The</span>
+        <span class="hero-title-main">Leaky<br>Tap</span>
+      </h1>
+      <p class="hero-tagline">
+        Where the working folk of Zadash<br>pour their worries into a cup — and drink them down.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn btn-primary">Tonight's Menu</a>
+        <a href="#rooms" class="btn btn-ghost">Book a Room</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll Down</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </div>
+
+    <div class="hero-banner">
+      <div class="hero-banner-track">
+        <span>Open Dusk till Dawn</span>
+        <span class="sep">✦</span>
+        <span>Rooms Available Nightly</span>
+        <span class="sep">✦</span>
+        <span>Live Music Most Evenings</span>
+        <span class="sep">✦</span>
+        <span>Hot Meals. Cold Ale. Warm Company.</span>
+        <span class="sep">✦</span>
+        <span>Open Dusk till Dawn</span>
+        <span class="sep">✦</span>
+        <span>Rooms Available Nightly</span>
+        <span class="sep">✦</span>
+        <span>Live Music Most Evenings</span>
+        <span class="sep">✦</span>
+        <span>Hot Meals. Cold Ale. Warm Company.</span>
+        <span class="sep">✦</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About the Establishment</p>
+          <h2 class="section-title">A Tavern<br><em>Worth Finding</em></h2>
+          <p>
+            Tucked into the Eastern Outersteads of Zadash, The Leaky Tap has stood as a refuge for the city's
+            working folk since before most can remember. Three stories of sturdy timber and stone, a raftered
+            ceiling soaring twelve feet above your head, and room enough for a dozen tables — all filled, most nights,
+            with honest folk seeking honest drink.
+          </p>
+          <p>
+            Don't come looking for gilded candelabras or velvet curtains. What you'll find here is something better:
+            warm ale poured without judgment, a half-elf band that plays <em>mostly</em> on key, and a barkeep
+            whose scarred smile tells you he's seen worse than whatever trouble you've walked in with.
+          </p>
+          <p>
+            Currently under the proud ownership of <strong>Lauren Schvine</strong>, the Leaky Tap carries on
+            its legacy as Zadash's most reliable stop for bed, board, and belonging — no matter what
+            empire says what on any given day.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Floors</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">12+</span>
+              <span class="stat-label">Tables</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Rounds Poured</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="about-card-inner">
+              <div class="about-lantern">🏮</div>
+              <h3>House Rules</h3>
+              <ul class="rules-list">
+                <li>No worship of unapproved deities on premises</li>
+                <li>Tabs opened; debts collected</li>
+                <li>Cards dealt fairly — cheaters will be noticed</li>
+                <li>The cellar is private. Do not enter the cellar.</li>
+                <li>Washroom basin refreshed every two hours</li>
+                <li>The band plays till they're tired. Tip them.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="menu" id="menu">
+    <div class="menu-bg-art" aria-hidden="true">MENU</div>
+    <div class="container">
+      <p class="section-label">What We're Pouring & Serving</p>
+      <h2 class="section-title">The Board<br><em>Tonight</em></h2>
+
+      <div class="menu-grid">
+
+        <div class="menu-category">
+          <h3 class="menu-cat-title">
+            <span class="menu-icon">🍺</span> Ales & Spirits
+          </h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-name">Zadash Dark Ale <span class="menu-tag">House Pour</span></div>
+              <div class="menu-item-desc">Rich and malty, brewed in the Outersteads. Served by the pint.</div>
+              <div class="menu-item-price">2 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Dwendalian Wheat</div>
+              <div class="menu-item-desc">Light, slightly bitter. Popular with the after-shift crowd.</div>
+              <div class="menu-item-price">2 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Outersteads Rotgut</div>
+              <div class="menu-item-desc">Don't ask what's in it. Works fast. Inexpensive.</div>
+              <div class="menu-item-price">1 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Red Wine, House Cellar <span class="menu-tag">Limited</span></div>
+              <div class="menu-item-desc">From our private stock. Old. Dusty. Better than it looks.</div>
+              <div class="menu-item-price">5 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Warm Spiced Mead</div>
+              <div class="menu-item-desc">Honey-forward, cinnamon finish. For those with coin to spare.</div>
+              <div class="menu-item-price">4 cp</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3 class="menu-cat-title">
+            <span class="menu-icon">🍖</span> Hot Meals
+          </h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-name">Thick Pottage <span class="menu-tag">Daily</span></div>
+              <div class="menu-item-desc">Broth, root vegetables, whatever the cook had this morning. Hearty.</div>
+              <div class="menu-item-price">3 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Salt Pork & Hard Bread</div>
+              <div class="menu-item-desc">The working man's supper. No frills. No complaints.</div>
+              <div class="menu-item-price">4 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Roasted Root Plate</div>
+              <div class="menu-item-desc">Turnips, parsnips, onions in drippings. Better than it sounds.</div>
+              <div class="menu-item-price">3 cp</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Mystery Meat Skewer</div>
+              <div class="menu-item-desc">The cook swears it's venison. We choose to believe her.</div>
+              <div class="menu-item-price">5 cp</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3 class="menu-cat-title">
+            <span class="menu-icon">🎲</span> Entertainment
+          </h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div class="menu-item-name">Crick-Queen's Call</div>
+              <div class="menu-item-desc">Cards. Ask a regular to teach you. Don't cheat — you will be caught.</div>
+              <div class="menu-item-price">Buy-in varies</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Live Half-Elf Band <span class="menu-tag">Most Nights</span></div>
+              <div class="menu-item-desc">Playing folk songs, mostly on key. Tips appreciated.</div>
+              <div class="menu-item-price">Free</div>
+            </li>
+            <li class="menu-item">
+              <div class="menu-item-name">Gossip & Local Intel</div>
+              <div class="menu-item-desc">Know the right person, ask the right way. Discretion is extra.</div>
+              <div class="menu-item-price">Negotiable</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="menu-note">
+        * Prices in copper pieces (cp). Silver accepted at standard exchange.<br>
+        All items subject to availability. The Leaky Tap is not responsible for wagers lost at the card table.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== ROOMS ========== -->
+  <section class="rooms" id="rooms">
+    <div class="container">
+      <p class="section-label">Upstairs Accommodations</p>
+      <h2 class="section-title">Rest Your<br><em>Weary Bones</em></h2>
+
+      <div class="rooms-grid">
+        <div class="room-card">
+          <div class="room-icon">🛏️</div>
+          <h3>Standard Room</h3>
+          <p>A bed, a lock, and a narrow window looking out on the Outersteads. Everything you need and nothing more. Washroom access included.</p>
+          <div class="room-price">5 sp / night</div>
+          <div class="room-includes">
+            <span>Bed & Pillow</span>
+            <span>Door Lock</span>
+            <span>Washroom Access</span>
+          </div>
+        </div>
+
+        <div class="room-card room-card-featured">
+          <div class="room-badge">Most Popular</div>
+          <div class="room-icon">🏠</div>
+          <h3>Corner Room</h3>
+          <p>The best we've got. Two windows, a slightly larger bed, a writing desk for those who have correspondence to attend to. Quieter side of the building.</p>
+          <div class="room-price">8 sp / night</div>
+          <div class="room-includes">
+            <span>Corner Double Bed</span>
+            <span>Writing Desk</span>
+            <span>Two Windows</span>
+            <span>Washroom Access</span>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-icon">👥</div>
+          <h3>Shared Bunks</h3>
+          <p>Six-bunk room on the third floor. Coin's tight? This is the answer. Bring your own pillow. Watch your boots.</p>
+          <div class="room-price">2 sp / night</div>
+          <div class="room-includes">
+            <span>Bunk Bed</span>
+            <span>Shared Washroom</span>
+            <span>Lockbox (extra)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rooms-note">
+        <span>🕯️</span>
+        <p>All rooms include access to the communal washroom — basin refreshed every two hours. Linens provided. The management bears no responsibility for items left unattended in shared spaces. If you need to speak to the owner, her office is on the landing between the first and second floor — no sign on the door, you'll know it when you find it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STAFF ========== -->
+  <section class="staff" id="staff">
+    <div class="container">
+      <p class="section-label">The People Behind the Bar</p>
+      <h2 class="section-title">Our<br><em>Crew</em></h2>
+
+      <div class="staff-grid">
+        <div class="staff-card">
+          <div class="staff-portrait">
+            <div class="staff-portrait-inner" data-initial="LS">
+              <span>👩</span>
+            </div>
+          </div>
+          <h3>Lauren Schvine</h3>
+          <p class="staff-role">Proprietor & Owner</p>
+          <p class="staff-bio">
+            A Zadash local who took over the Tap from her friend Claudia Sheed. Lauren runs a tight ship with a warm heart. She knows this district, its people, and its whispers better than anyone. If you need something done in the Outersteads, she's likely the place to start.
+          </p>
+        </div>
+
+        <div class="staff-card staff-card-featured">
+          <div class="staff-portrait">
+            <div class="staff-portrait-inner staff-dragon" data-initial="WT">
+              <span>🐉</span>
+            </div>
+          </div>
+          <h3>Wessek the Trim</h3>
+          <p class="staff-role">Head Barkeep</p>
+          <p class="staff-bio">
+            A plump white dragonborn with a scarred but jovial face — and the fastest hands behind any bar in the Outersteads. Wessek has a gift for opening tabs, remembering faces, and greeting even the most unusual parties with nothing but a raised eyebrow and a generous pour. "But there's six of you," he's been known to say. He'll find you a table.
+          </p>
+          <div class="staff-quote">"But there's six of you."</div>
+        </div>
+
+        <div class="staff-card">
+          <div class="staff-portrait">
+            <div class="staff-portrait-inner" data-initial="BN">
+              <span>🎵</span>
+            </div>
+          </div>
+          <h3>The House Band</h3>
+          <p class="staff-role">Half-Elf Ensemble · Most Evenings</p>
+          <p class="staff-bio">
+            A rotating cast of half-elf musicians who've called the corner of the Leaky Tap home for longer than most staff can remember. They play folk ballads, working songs, and the occasional shanty from the Menagerie Coast. Mostly on key. Always full of heart.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EVENTS ========== -->
+  <section class="events" id="events">
+    <div class="container">
+      <p class="section-label">What's On</p>
+      <h2 class="section-title">Upcoming<br><em>at the Tap</em></h2>
+
+      <div class="events-list">
+        <div class="event-row">
+          <div class="event-date">
+            <span class="event-day">FRI</span>
+            <span class="event-num">14</span>
+          </div>
+          <div class="event-info">
+            <h4>Crick-Queen's Call Night</h4>
+            <p>Weekly card tournament. Buy-in: 5 cp. Winner takes the pot. House rules apply. No hexes, enchantments, or illusions at the table — the last group that tried that had to leave through a window.</p>
+          </div>
+          <div class="event-badge">Cards</div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date">
+            <span class="event-day">SAT</span>
+            <span class="event-num">15</span>
+          </div>
+          <div class="event-info">
+            <h4>Half-Elf Ensemble Live Set</h4>
+            <p>The house band plays all evening. Requests taken for a copper, but no promises. Mostly on key, always on time.</p>
+          </div>
+          <div class="event-badge">Music</div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date">
+            <span class="event-day">SUN</span>
+            <span class="event-num">16</span>
+          </div>
+          <div class="event-info">
+            <h4>Working Folk's Supper</h4>
+            <p>Discounted pottage and ale for anyone who can show proof of a day's honest work. Lauren's way of giving back to the Outersteads.</p>
+          </div>
+          <div class="event-badge">Special</div>
+        </div>
+
+        <div class="event-row">
+          <div class="event-date">
+            <span class="event-day">WED</span>
+            <span class="event-num">19</span>
+          </div>
+          <div class="event-info">
+            <h4>Open Rumor Night</h4>
+            <p>Buy a drink, share a rumor. Wessek presides. No names, no sources, no promises of accuracy. For entertainment purposes only. Probably.</p>
+          </div>
+          <div class="event-badge">Social</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FIND US ========== -->
+  <section class="find-us" id="find-us">
+    <div class="container">
+      <div class="find-grid">
+        <div class="find-text">
+          <p class="section-label">Getting Here</p>
+          <h2 class="section-title">Find the<br><em>Tap</em></h2>
+          <p>
+            We're in the Eastern Outersteads of Zadash — the part of the city the Crownsguard doesn't patrol as often as they should, which makes for a lively evening. Look for the sign with the dripping tankard. If you reach the Chained Alley, you've gone a touch too far.
+          </p>
+          <p>
+            No carriage service. No courier pigeons. Walk in, same as everyone else.
+          </p>
+          <div class="find-details">
+            <div class="find-detail">
+              <span class="find-detail-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <span>Eastern Outersteads, Zadash<br>Dwendalian Empire</span>
+              </div>
+            </div>
+            <div class="find-detail">
+              <span class="find-detail-icon">🕯️</span>
+              <div>
+                <strong>Hours</strong>
+                <span>Dusk till Dawn, Seven Days</span>
+              </div>
+            </div>
+            <div class="find-detail">
+              <span class="find-detail-icon">💬</span>
+              <div>
+                <strong>Inquiries</strong>
+                <span>Ask for Lauren or Wessek at the bar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="find-map">
+          <div class="map-art">
+            <div class="map-label-top">← To the Innersteads</div>
+            <div class="map-paths">
+              <div class="map-road map-road-h"></div>
+              <div class="map-road map-road-v"></div>
+              <div class="map-building map-b1">Leaky<br>Tap 🍺</div>
+              <div class="map-building map-b2">Smithy</div>
+              <div class="map-building map-b3">Stables</div>
+              <div class="map-building map-b4">Bathhouse</div>
+              <div class="map-label-bot">Chained Alley →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span>🍺</span>
+        <span>The Leaky Tap</span>
+      </div>
+      <p class="footer-tagline">
+        <em>"Hot Meals. Cold Ale. Warm Company."</em>
+      </p>
+      <div class="footer-divider">✦ ✦ ✦</div>
+      <p class="footer-legal">
+        Eastern Outersteads · Zadash · Dwendalian Empire · Est. 830 PD<br>
+        The Leaky Tap is a fictional establishment from <strong>Critical Role</strong> Campaign 2: The Mighty Nein.<br>
+        All lore belongs to Critical Role. This fan site is a tribute.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
