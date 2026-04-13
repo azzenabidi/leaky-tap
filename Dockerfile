@@ -9,7 +9,7 @@ LABEL maintainer="Your Name <you@example.com>"
 LABEL description="The Leaky Tap – Fan website for Critical Role's fictional tavern in Zadash"
 
 # Copy custom nginx config FIRST (before clearing html dir)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Remove default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
